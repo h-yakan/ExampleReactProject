@@ -4,7 +4,7 @@ export default Books;
 
 function Books() {
   return (
-    <section className="Books">
+    <section className="books">
       <Book />
       <Book />
       <Book />
@@ -27,12 +27,7 @@ const Book = () => {
 };
 
 const Image = () => {
-  return (
-    <img
-      src="https://img.kitapyurdu.com/v1/getImage/fn:11668214/wh:true/wi:800"
-      alt="İnsan Nedir?"
-    />
-  );
+  return <img src="./images/insan_nedir_1.jpg" alt="İnsan Nedir?" />;
 };
 
 const Title = () => {
