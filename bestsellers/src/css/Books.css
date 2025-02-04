@@ -35,7 +35,7 @@ body {
   object-fit: cover;
 }
 
-.book h2 {
+.book h1 {
   font-size: 1rem;
   margin-top: 1rem;
 }
