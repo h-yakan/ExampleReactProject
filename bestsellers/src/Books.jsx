@@ -11,7 +11,7 @@ const first_book = {
 const second_book = {
   author: "Friedrich Dürrenmatt",
   title: "Gözlemcileri Gözlemleyenin Gözlemi",
-  img: "./imgaes/gozlemcileri_gozlemleyenin_gozlemi.jpg",
+  img: "./images/gozlemcileri_gozlemleyenin_gozlemi.jpg",
   id: 2,
 };
 
@@ -19,11 +19,6 @@ const books = [first_book, second_book];
 function Books() {
   return (
     <section className="books">
-      {/* <Book
-        img={first_book.img}
-        title={first_book.title}
-        author={first_book.author}
-        /> */}
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
       })}
@@ -38,7 +33,31 @@ const Book = (book) => {
       <Image img={img} title={title} />
       <Title title={title} />
       <Author author={author} />
+      <EventExamples message={title} />
     </article>
+  );
+};
+const EventExamples = (message) => {
+  const handleButton = () => {
+    alert("TIKLANDI");
+  };
+  const handleFormInput = (e) => {
+    console.log("YAZILDI");
+  };
+
+  return (
+    <div>
+      <form>
+        <h2>Form</h2>
+        <input
+          type="text"
+          name="example"
+          onChange={handleFormInput}
+          style={{ margin: "1rem 0" }}
+        />
+      </form>
+      <button onClick={handleButton}>CLICK</button>
+    </div>
   );
 };
 
