@@ -1,5 +1,5 @@
 const Book = (book) => {
-  const { img, title, author, number, id } = book;
+  const { img, title, author, number } = book;
   //   const getSingleBook = () => {
   //     getBook(id);
   //   };
@@ -8,8 +8,8 @@ const Book = (book) => {
       <Image img={img} title={title} />
       <Title title={title} />
       <Author author={author} />
-      <span className="number">{number}</span>
-      <EventExamples message={title} />
+      <span className="number">{"# " + number}</span>
+      {/* <EventExamples message={title} /> */}
       {/* <EventExamples message={title} getSingleBook={getSingleBook} /> */}
     </article>
   );
@@ -36,7 +36,7 @@ const EventExamples = (props) => {
           style={{ margin: "1rem 0" }}
         />
       </form>
-      <button onClick={handleButton}>CLICK</button>
+      <button onClick={handleButton}>Tıkla</button>
     </div>
   );
 };

@@ -8,12 +8,15 @@ function Books() {
     const book = books.find((book) => book.id === id);
     console.log(book);
   };
-
   return (
-    <section className="books">
-      {books.map((book) => {
-        return <Book {...book} key={book.id} />;
-      })}
-    </section>
+    <>
+      <h2>AAAAAA</h2>
+      <section className="books">
+        {books.map((book, index) => {
+          console.log(book);
+          return <Book {...book} key={book.id} number={index + 1} />;
+        })}
+      </section>
+    </>
   );
 }
